@@ -1,0 +1,76 @@
+/* Bootstrap overrides */ 
+.navbar-brand{
+    padding: 0px 15px;
+}
+
+.brand {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 50px;
+}
+.brand.brand-primary {
+    font-family: 'Exo 2', sans-serif;
+    color: #039e15;
+    margin-right: 8px;
+}
+
+
+/* FA Animation */
+@-webkit-keyframes tada {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    10%, 20% {
+      -webkit-transform: scale(.9) rotate(-8deg);
+      transform: scale(.9) rotate(-8deg);
+    }
+  
+    30%, 50%, 70% {
+      -webkit-transform: scale(1.3) rotate(8deg);
+      transform: scale(1.3) rotate(8deg);
+    }
+  
+    40%, 60% {
+      -webkit-transform: scale(1.3) rotate(-8deg);
+      transform: scale(1.3) rotate(-8deg);
+    }
+  
+    80%, 100% {
+      -webkit-transform: scale(1) rotate(0);
+      transform: scale(1) rotate(0);
+    }
+}
+  
+@keyframes tada {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    10%, 20% {
+      -webkit-transform: scale(.9) rotate(-8deg);
+      transform: scale(.9) rotate(-8deg);
+    }
+  
+    30%, 50%, 70% {
+      -webkit-transform: scale(1.3) rotate(8deg);
+      transform: scale(1.3) rotate(8deg);
+    }
+  
+    40%, 60% {
+      -webkit-transform: scale(1.3) rotate(-8deg);
+      transform: scale(1.3) rotate(-8deg);
+    }
+  
+    80%, 100% {
+      -webkit-transform: scale(1) rotate(0);
+      transform: scale(1) rotate(0);
+    }
+}
+
+a.navbar-brand:hover > .faa-tada {
+    -webkit-animation: tada 2s linear infinite;
+    animation: tada 2s linear infinite;
+}
+/* FA Animation END */
