@@ -1,8 +1,23 @@
-/* Bootstrap overrides */ 
-.navbar-brand{
-    padding: 0px 15px;
+.main-content {
+    margin-top: -50px;
+    padding-top: 50px;
+    display: block;
 }
 
+/* Bootstrap overrides */ 
+.navbar-brand {
+    padding: 0px 15px;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* Bootstrap overrides end */
+
+/* Branding logo */
 .brand {
     font-family: 'Exo 2', sans-serif;
     font-size: 50px;
@@ -12,61 +27,94 @@
     color: #039e15;
     margin-right: 8px;
 }
+/* Branding logo end */
+
+/* Search module */
+  .search-container{
+    height: 365px;
+    width: 100%;
+    border-radius: 10px;
+    border: 5px solid #039e15;
+    margin-bottom: 45px;
+  }
+/* Search module end */
+
+/* Recommended module */
+.recommended-container {
+    height: 230px;
+    width: 100%;
+    border-radius: 10px;
+    border: 5px solid #039e15;
+    margin-bottom: 45px;
+}
+
+.recommended-container > .section-title {
+    font-size: 25px;
+    padding: 5px;
+}
+
+.recommended-thumbnail {
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+/* Recommended module end */
 
 /* Footer */
 .footer-basic-centered{
-	background-color: #039e15;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: center;
-	font: normal 18px sans-serif;
-
-	padding: 45px;
-	margin-top: 80px;
+    background-color: #039e15;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    font: normal 18px sans-serif;
+    height: 20%;
+    padding: 45px;
 }
 
 .footer-basic-centered .footer-company-motto{
-	color:  #FFFFFF;
-	font-size: 24px;
-  margin: 0;
-  padding: 0 0px 23px 0px;
+    color:  #FFFFFF;
+    font-size: 24px;
+    margin: 0;
+    padding: 0 0px 23px 0px;
 }
 
 .footer-basic-centered .footer-company-name{
-	color:  #FFFFFF;
-	font-size: 14px;
-	margin: 0;
+    color:  #FFFFFF;
+    font-size: 14px;
+    margin: 0;
 }
 
 .footer-basic-centered .footer-links a{
-	display:inline-block;
-	text-decoration: none;
-	color: inherit;
+    display:inline-block;
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (max-width: 600px) {
 
-	.footer-basic-centered{
-		padding: 35px;
-	}
+    .footer-basic-centered{
+      padding: 35px;
+    }
 
-	.footer-basic-centered .footer-company-motto{
-		font-size: 18px;
-	}
+    .footer-basic-centered .footer-company-motto{
+      font-size: 18px;
+    }
 
-	.footer-basic-centered .footer-company-name{
-		font-size: 12px;
-	}
+    .footer-basic-centered .footer-company-name{
+      font-size: 12px;
+    }
 
-	.footer-basic-centered .footer-links{
-		font-size: 14px;
-		padding: 25px 0 20px;
-	}
+    .footer-basic-centered .footer-links{
+      font-size: 14px;
+      padding: 25px 0 20px;
+    }
 
-	.footer-basic-centered .footer-links a{
-		line-height: 1.8;
-	}
+    .footer-basic-centered .footer-links a{
+      line-height: 1.8;
+    }
 }
 /* Footer end */
 
