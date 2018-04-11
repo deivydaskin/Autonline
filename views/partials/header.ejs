@@ -19,9 +19,14 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">Prisijungti</a></li>
-                <li><a href="/">Registracija</a></li>
-                <li><a href="/">Atsijungti</a></li>
+                <% console.log(currentUser) %>
+                <% if (!currentUser) { %>
+                <li><a href="/user/login">Prisijungti</a></li>
+                <li><a href="/user/register">Registracija</a></li>
+                <% } else { %>
+                    <li><a href="#"><%= currentUser.username %></a></li>
+                    <li><a href="/user/logout">Atsijungti</a></li>
+                <% } %>
             </ul>
         </div>
     </div>

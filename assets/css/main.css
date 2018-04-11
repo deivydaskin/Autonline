@@ -3,6 +3,9 @@
     padding-top: 50px;
     display: block;
 }
+.registration-content {
+    height: 80%;
+}
 
 /* Bootstrap overrides */ 
 .navbar-brand {
