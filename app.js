@@ -114,8 +114,9 @@ app.post(paths.cars.search, function (req, res){
             console.log("Error");
         }
         else {
-            console.log(done);
-            res.render('search', {cars: done});
+            if (done){
+                res.render('search', {cars: done});
+            }
         }});
     });
 
