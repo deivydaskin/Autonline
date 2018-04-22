@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
@@ -19,13 +21,18 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <% console.log(currentUser) %>
                 <% if (!currentUser) { %>
                 <li><a href="/user/login">Prisijungti</a></li>
                 <li><a href="/user/register">Registracija</a></li>
                 <% } else { %>
-                    <li><a href="#"><%= currentUser.username %></a></li>
-                    <li><a href="/user/logout">Atsijungti</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= currentUser.username %><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="/cars/new">Įkelti skelbimą</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="/user/logout">Atsijungti</a></li>
+                        </ul>
+                      </li>   
                 <% } %>
             </ul>
         </div>

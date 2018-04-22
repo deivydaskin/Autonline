@@ -1,0 +1,11 @@
+<% include partials/header %>
+<% console.log(cars[0].name) %>
+<h1><%= cars[0].name %></h1>
+<hr>
+<% cars.forEach(function (e){ %>
+    <div class="car-container">
+        <div class="car-photo" style="background-image: url(<%= e.image%>)"></div>
+        <div class="car-desc"><%= e.description %></div>
+    </div>
+<% }) %>
+<% include partials/footer %>

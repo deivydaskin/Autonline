@@ -6,6 +6,31 @@
 .registration-content {
     height: 80%;
 }
+.car-photo {
+    height: 150px;
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    border: 2px solid #039e15;
+    border-radius: 5px;
+}
+.car-desc {
+  padding: 10px 10px 10px 10px;
+  height: 150px;
+  width: 80%;
+  margin-right: 50px;
+  position: absolute;
+  display: inline-block;
+  border: 2px solid #039e15;
+  border-radius: 5px;
+
+}
+.car-container {
+  width: 93%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
 /* Bootstrap overrides */ 
 .navbar-brand {
@@ -39,6 +64,8 @@
     border-radius: 10px;
     border: 5px solid #039e15;
     margin-bottom: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 /* Search module end */
 

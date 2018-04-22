@@ -5,6 +5,7 @@ var express = require('express'),
     paths = require('./paths.js'),
     passport = require('passport'),
     localStrategy = require('passport-local');
+    Car = require('./models/car');
 
 var User = require('./models/user')
 mongoose.connect('mongodb://autonline:6xMWwrVyIn6CTsyy@cluster0-shard-00-00-f6idp.mongodb.net:27017,cluster0-shard-00-01-f6idp.mongodb.net:27017,cluster0-shard-00-02-f6idp.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin')
@@ -84,6 +85,39 @@ function isLoggedIn(req, res, next){
 app.get('/', function (req, res){
     res.render('landing');
 });
+
+app.get(paths.cars.new, function (req, res){
+    res.render('carsNew');
+});
+
+app.post(paths.cars.new, function (req, res){
+    Car.create({
+        name: req.body.name,
+        image: req.body.image,
+        description: req.body.description
+    }, function (err, done){
+        if (err){
+            console.log("Error");
+        }
+        else {
+            console.log("Done");
+            res.redirect('/');
+        }
+    })
+});
+
+app.post(paths.cars.search, function (req, res){
+    Car.find({
+        name: req.body.name,
+    }, function (err, done){
+        if (err){
+            console.log("Error");
+        }
+        else {
+            console.log(done);
+            res.render('search', {cars: done});
+        }});
+    });
 
 
 app.listen('3000');
